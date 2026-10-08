@@ -1,6 +1,6 @@
 # Widget Grist — Atterrissage des grands programmes
 
-Le fichier `src/grist-widget.html` fournit un widget personnalisé Grist en lecture seule. Il reprend les quatre vues interactives du projet **Atterrissage GP** : dépenses annuelles par nature, personnel par année et structure, personnel par structure et GP, puis personnel par année et GP. Les filtres communs peuvent être rendus indépendants sur les trois graphiques de personnel.
+Le fichier `src/grist-widget.html` fournit un widget personnalisé Grist en lecture seule. Il reprend les quatre vues interactives du projet **Atterrissage GP**, chacune dans son propre onglet : dépenses annuelles par nature, personnel par année et structure, personnel par structure et GP, puis personnel par année et GP. Les filtres communs peuvent être rendus indépendants sur les trois graphiques de personnel.
 
 ## Table source
 
