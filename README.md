@@ -17,7 +17,7 @@ Dans Grist, sélectionnez la table importée depuis `Anthony2.xlsx` dans le pann
 | Structure | `Structure organisationnelle héritée bis` |
 | Thématique | `Thématiques` |
 
-Le widget agrège les lignes de la table sélectionnée. Il utilise `Consommation AE` jusqu’en 2025 inclus, puis `Ope - Positionné AE` à partir de 2026. Les deux programmes IdEx « Ingénierie de pilotage » et « Soutien aux missions ESRI » sont séparés ; les autres sont regroupés. La structure `Non défini` est présentée sous `ND`. Une valeur de thématique vide est affichée sous `Non renseignée`. Les séries utilisent une palette adaptée aux déficiences de vision des couleurs.
+Le widget agrège les lignes de la table sélectionnée. Il utilise `Consommation AE` jusqu’en 2025 inclus, puis `Ope - Positionné AE` à partir de 2026. Les deux programmes IdEx « Ingénierie de pilotage » et « Soutien aux missions ESRI » sont séparés ; les autres sont regroupés. La structure `Non défini` est présentée sous `ND`. Une valeur de thématique vide est affichée sous `Non renseignée`. Les séries utilisent une palette adaptée aux déficiences de vision des couleurs. Les filtres communs et les choix indépendants par graphique sont mémorisés dans le stockage local du navigateur.
 
 ## Intégration
 
