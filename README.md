@@ -1,6 +1,6 @@
 # Widget Grist — Atterrissage des grands programmes
 
-Le fichier `src/grist-widget.html` fournit un widget personnalisé Grist en lecture seule, avec cinq graphiques séparés par onglet. Le bouton **Mapping**, en haut à droite, permet de saisir la clé de chaque champ telle qu’elle apparaît dans les enregistrements reçus de Grist. Les clés observées sont proposées en saisie semi-automatique. Le widget déclare également ses champs cibles avec `grist.mapColumn` pour le sélecteur de colonnes Grist.
+Le fichier `src/grist-widget.html` fournit un widget personnalisé Grist en lecture seule, avec cinq graphiques séparés par onglet. Le bouton **Mapping**, en haut à droite, ouvre des menus déroulants pour choisir la clé source de chaque champ ; les clés reçues de Grist sont listées et la correspondance détectée est présélectionnée. Le widget déclare également ses champs cibles avec `grist.mapColumn` pour le sélecteur de colonnes Grist. Chaque graphique propose un bouton **Zoom** : la fenêtre agrandie conserve sa légende interactive.
 
 ## Table source
 
