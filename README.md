@@ -1,6 +1,6 @@
 # Widget Grist — Atterrissage des grands programmes
 
-Le fichier `src/grist-widget.html` fournit un widget personnalisé Grist en lecture seule, avec cinq graphiques séparés par onglet. Les six champs requis se configurent dans le sélecteur de colonnes Grist créé par `grist.mapColumn` :
+Le fichier `src/grist-widget.html` fournit un widget personnalisé Grist en lecture seule, avec cinq graphiques séparés par onglet. Le bouton **Mapping**, en haut à droite, permet de saisir la clé de chaque champ telle qu’elle apparaît dans les enregistrements reçus de Grist. Les clés observées sont proposées en saisie semi-automatique. Le widget déclare également ses champs cibles avec `grist.mapColumn` pour le sélecteur de colonnes Grist.
 
 ## Table source
 
@@ -19,6 +19,6 @@ Le montant est lu dans un champ unique : le widget ne choisit plus entre consomm
 
 ## Intégration
 
-Hébergez `src/grist-widget.html` sur une adresse HTTPS accessible depuis le navigateur qui ouvre Grist, puis ajoutez-la comme **Custom Widget** avec cette URL. Dans Grist, accordez au widget l’accès en lecture à la table et associez les six champs requis aux colonnes choisies. Pour une instance Grist auto-hébergée, adaptez l’URL du script `grist-plugin-api.js` en haut du fichier au domaine de cette instance.
+Hébergez `src/grist-widget.html` sur une adresse HTTPS accessible depuis le navigateur qui ouvre Grist, puis ajoutez-la comme **Custom Widget** avec cette URL. Dans Grist, accordez au widget l’accès en lecture à la table. Après réception de données, ouvrez **Mapping** et renseignez les clés source si les suggestions ne correspondent pas. Si aucune clé source n’apparaît, vérifiez que Grist transmet bien les colonnes de la table au widget. Pour une instance Grist auto-hébergée, adaptez l’URL du script `grist-plugin-api.js` en haut du fichier au domaine de cette instance.
 
 Le widget ne contient ni données budgétaires ni identifiants. Les données sont lues à la volée depuis la table liée ; les changements de cette table actualisent les graphiques.
