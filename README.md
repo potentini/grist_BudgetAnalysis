@@ -1,26 +1,24 @@
 # Widget Grist — Atterrissage des grands programmes
 
-Le fichier `src/grist-widget.html` fournit un widget personnalisé Grist en lecture seule. Il reprend les quatre vues interactives du projet **Atterrissage GP**, chacune dans son propre onglet, et ajoute une cinquième vue de PRS annuel par thématique sous forme de barres empilées. Celle-ci utilise la colonne source `Thématiques`. Les filtres communs peuvent être rendus indépendants sur les graphiques de personnel.
+Le fichier `src/grist-widget.html` fournit un widget personnalisé Grist en lecture seule, avec cinq graphiques séparés par onglet. Les six champs requis se configurent dans le sélecteur de colonnes Grist créé par `grist.mapColumn` :
 
 ## Table source
 
 Dans Grist, sélectionnez la table importée depuis `Anthony2.xlsx` dans le panneau **Données**, puis associez les champs demandés par le widget aux colonnes suivantes :
 
-| Champ du widget | Colonne Anthony2 |
+| Champ demandé dans le widget | Colonne source à associer |
 | --- | --- |
 | GP | `GP` |
-| Programme | `Programme` |
 | Exercice | `Ope - Budget Exercice` |
 | Nature | `Ope - Nature Dépenses` |
-| Consommation AE | `Consommation AE` |
-| Positionné AE | `Ope - Positionné AE` |
+| Montant unique | La colonne qui contient déjà le montant AE à agréger |
 | Structure | `Structure organisationnelle héritée bis` |
 | Thématique | `Thématiques` |
 
-Le widget agrège les lignes de la table sélectionnée. Il utilise `Consommation AE` jusqu’en 2025 inclus, puis `Ope - Positionné AE` à partir de 2026. Les deux programmes IdEx « Ingénierie de pilotage » et « Soutien aux missions ESRI » sont séparés ; les autres sont regroupés. La structure `Non défini` est présentée sous `ND`. Une valeur de thématique vide est affichée sous `Non renseignée`. Les séries utilisent une palette adaptée aux déficiences de vision des couleurs. Les filtres communs et les choix indépendants par graphique sont mémorisés dans le stockage local du navigateur.
+Le montant est lu dans un champ unique : le widget ne choisit plus entre consommé et positionné selon l’année. Les lignes sont agrégées par exercice et dimensions du graphique. Chaque légende filtre les séries de son graphique, y compris la légende des natures. Les légendes apparaissent sous les graphiques. Les filtres communs peuvent être rendus indépendants par graphique et sont mémorisés dans le stockage local du navigateur. Les GP, y compris IdEx, sont utilisés tels que fournis. Une structure vide ou `Non défini` est affichée sous `ND`; une thématique vide sous `Non renseignée`.
 
 ## Intégration
 
-Hébergez `src/grist-widget.html` sur une adresse HTTPS accessible depuis le navigateur qui ouvre Grist, puis ajoutez-la comme **Custom Widget** avec cette URL. Dans Grist, accordez au widget l’accès en lecture à la table et confirmez les huit associations de colonnes. Pour une instance Grist auto-hébergée, adaptez l’URL du script `grist-plugin-api.js` en haut du fichier au domaine de cette instance.
+Hébergez `src/grist-widget.html` sur une adresse HTTPS accessible depuis le navigateur qui ouvre Grist, puis ajoutez-la comme **Custom Widget** avec cette URL. Dans Grist, accordez au widget l’accès en lecture à la table et associez les six champs requis aux colonnes choisies. Pour une instance Grist auto-hébergée, adaptez l’URL du script `grist-plugin-api.js` en haut du fichier au domaine de cette instance.
 
 Le widget ne contient ni données budgétaires ni identifiants. Les données sont lues à la volée depuis la table liée ; les changements de cette table actualisent les graphiques.
