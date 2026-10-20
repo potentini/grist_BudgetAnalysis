@@ -15,8 +15,9 @@ Dans Grist, sélectionnez la table importée depuis `Anthony2.xlsx` dans le pann
 | Montant unique | La colonne qui contient déjà le montant AE à agréger |
 | Structure | `Structure organisationnelle héritée bis` |
 | Thématique | `Thématiques` |
+| Statut (facultatif, pour le compteur supérieur) | `Statut` |
 
-Le montant est lu dans un champ unique : le widget ne choisit plus entre consommé et positionné selon l’année. Les lignes sont agrégées par exercice et dimensions du graphique. Tous les programmes sont sélectionnés par défaut. Le filtre **Programmes** propose une sélection de GP pour réduire les cases affichées; le filtre GP du graphique reste disponible séparément. Les graphiques 2 à 5 agrègent les natures sélectionnées; choisir uniquement **Personnel (PRS)** permet de retrouver une vue centrée sur le personnel. Chaque légende filtre les séries de son graphique, y compris la légende des natures. Les légendes apparaissent sous les graphiques. Les filtres communs peuvent être rendus indépendants par graphique et sont mémorisés dans le stockage local du navigateur. Les GP, y compris IdEx, sont utilisés tels que fournis. Une structure vide ou `Non défini` est affichée sous `ND`; une thématique vide sous `Non renseignée`.
+Le montant est lu dans un champ unique : le widget ne choisit plus entre consommé et positionné selon l’année. Les filtres sont affichés une seule fois au-dessus du graphique actif. Les graphiques 2 à 5 suivent les filtres du graphique 1 par défaut; modifier un filtre les désolidarise automatiquement, et recocher **Suivre les filtres communs** les réaligne. Tous les programmes sont sélectionnés par défaut. Le filtre **Programmes** propose une sélection de GP pour réduire les cases affichées. Les graphiques 2 à 5 agrègent les natures sélectionnées; choisir uniquement **Personnel (PRS)** permet de retrouver une vue centrée sur le personnel. Chaque légende filtre les séries de son graphique. Les GP, y compris IdEx, sont utilisés tels que fournis. Une structure vide ou `Non défini` est affichée sous `ND`; une thématique vide sous `Non renseignée`.
 
 ## Intégration
 
