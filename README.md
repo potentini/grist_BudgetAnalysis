@@ -9,13 +9,14 @@ Dans Grist, sélectionnez la table importée depuis `Anthony2.xlsx` dans le pann
 | Champ demandé dans le widget | Colonne source à associer |
 | --- | --- |
 | GP | `GP` |
+| Programme | La colonne contenant le nom du programme |
 | Exercice | `Ope - Budget Exercice` |
 | Nature | `Ope - Nature Dépenses` |
 | Montant unique | La colonne qui contient déjà le montant AE à agréger |
 | Structure | `Structure organisationnelle héritée bis` |
 | Thématique | `Thématiques` |
 
-Le montant est lu dans un champ unique : le widget ne choisit plus entre consommé et positionné selon l’année. Les lignes sont agrégées par exercice et dimensions du graphique. Chaque légende filtre les séries de son graphique, y compris la légende des natures. Les légendes apparaissent sous les graphiques. Les filtres communs peuvent être rendus indépendants par graphique et sont mémorisés dans le stockage local du navigateur. Les GP, y compris IdEx, sont utilisés tels que fournis. Une structure vide ou `Non défini` est affichée sous `ND`; une thématique vide sous `Non renseignée`.
+Le montant est lu dans un champ unique : le widget ne choisit plus entre consommé et positionné selon l’année. Les lignes sont agrégées par exercice et dimensions du graphique. Tous les programmes sont sélectionnés par défaut. Le filtre **Programmes** propose une sélection de GP pour réduire les cases affichées; le filtre GP du graphique reste disponible séparément. Les graphiques 2 à 5 agrègent les natures sélectionnées; choisir uniquement **Personnel (PRS)** permet de retrouver une vue centrée sur le personnel. Chaque légende filtre les séries de son graphique, y compris la légende des natures. Les légendes apparaissent sous les graphiques. Les filtres communs peuvent être rendus indépendants par graphique et sont mémorisés dans le stockage local du navigateur. Les GP, y compris IdEx, sont utilisés tels que fournis. Une structure vide ou `Non défini` est affichée sous `ND`; une thématique vide sous `Non renseignée`.
 
 ## Intégration
 
