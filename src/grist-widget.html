@@ -119,9 +119,9 @@
     }
     if(key!=='nature')$('.follow input',panel.parentElement).checked=independent[key]===null;
   }
-  function currentRows(key){const f=filtersFor(key),scope=entries.filter(r=>f.groups.has(r.gp)&&f.programs.has(r.program)&&f.structures.has(r.structure)&&f.years.has(r.year)),filtered=scope.filter(r=>f.natures.has(r.nature)&&(key!=='theme'||f.themes.has(r.theme)));let cats=[];
+  function currentRows(key){const f=filtersFor(key),scope=entries.filter(r=>f.groups.has(r.gp)&&f.programs.has(r.program)&&f.structures.has(r.structure)&&f.years.has(r.year)),natureScope=scope.filter(r=>f.natures.has(r.nature)),filtered=natureScope.filter(r=>key!=='theme'||f.themes.has(r.theme));let cats=[];
     if(key==='nature')cats=[...new Set(scope.map(r=>r.nature))].sort((a,b)=>a.localeCompare(b,'fr'));
-    else cats=[...new Set(filtered.map(r=>key==='annual'?r.structure:key==='theme'?r.theme:r.gp))].sort((a,b)=>a.localeCompare(b,'fr'));
+    else cats=[...new Set((key==='theme'?natureScope:filtered).map(r=>key==='annual'?r.structure:key==='theme'?r.theme:r.gp))].sort((a,b)=>a.localeCompare(b,'fr'));
     const axis=key==='structure'?dimensions.structures.filter(s=>f.structures.has(s)):dimensions.years.filter(y=>f.years.has(y));
     const rows=axis.map(x=>({x,total:0,values:Object.fromEntries(cats.map(c=>[c,0]))}));const byX=new Map(rows.map(r=>[r.x,r]));
     filtered.forEach(r=>{const x=key==='structure'?r.structure:r.year,series=key==='nature'?r.nature:key==='annual'?r.structure:key==='theme'?r.theme:r.gp,row=byX.get(x);if(row&&Object.prototype.hasOwnProperty.call(row.values,series)){row.values[series]+=r.amount;row.total+=r.amount;}});
