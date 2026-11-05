@@ -23,3 +23,7 @@ No Git history is available to establish an existing commit convention. Use shor
 ## Configuration and Sensitive Data
 
 Keep credentials and private financial data out of source control. Put local-only settings in an ignored environment file, provide a safe example file when configuration becomes necessary, and never commit real secrets or customer data.
+
+## Widget Version
+
+Update `WIDGET_VERSION` in `src/grist-widget.html` to a new unique value for every change to that file. The badge identifies the version actually loaded and compares it with the file on `main`.
