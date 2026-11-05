@@ -26,4 +26,4 @@ Keep credentials and private financial data out of source control. Put local-onl
 
 ## Widget Version
 
-Update `WIDGET_VERSION` in `src/grist-widget.html` to a new unique value for every change to that file. The badge identifies the version actually loaded and compares it with the file on `main`.
+The GitHub Pages workflow injects the build commit into the widget. Keep the `__WIDGET_COMMIT__` placeholder in the source file.
